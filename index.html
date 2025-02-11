@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saylani LMS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="flex bg-[#0066b3] text-white p-2 w-screen fixed z-20">
+      <img src="assets/images/logo.png" class="w-40 bg-white rounded-3xl" />
+      <ul class="flex justify-end space-x-6 me-6 w-screen">
+        <li><a href="#" class="block p-2">Profile</a></li>
+        <li><a href="#" class="block p-2">Settings</a></li>
+      </ul>
+    </nav>
+    <!-- Sidebar -->
+    <aside class="bg-[#0066b3] sidebar w-30 h-screen p-6 mt-12 text-white fixed z-10">
+      <h2 class="text-2xl font-bold text-[#8dc63f] p-3">Dashboard</h2>
+      <ul class="">
+        <li><a href="#" class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3" >Overview</a></li>
+        <li><a href="#" class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3" onclick="loadPage('./pages/quiz.html')">Quiz Portal</a></li>
+        <li><a href="#" class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3" >Assignments</a></li>
+      </ul>
+    </aside>
+
+    <div id="main" class="ml-40 pt-20 flex justify-center items-center">
+      <!-- Hero Section -->
+      <section
+        class="h-screen flex flex-col justify-center items-center text-center p-6"
+      >
+        <h2
+          class="text-4xl font-bold text-blue-700 mb-4 opacity-0"
+          id="hero-title"
+        >
+          Empowering Students with Quality Education
+        </h2>
+        <p class="text-lg text-gray-600 opacity-0" id="hero-subtext">
+          Access your courses, track progress, and achieve success.
+        </p>
+      </section>
+    </div>
+    <!-- Footer -->
+    <footer class="bg-[#0066b3] text-white p-2 text-center ml-40">
+        <p>&copy; 2025 Saylani LMS. All rights reserved.</p>
+      </footer>
+
+    <script src="assets/javascript/app.js">
+     
+    </script>
+  </body>
+</html>
