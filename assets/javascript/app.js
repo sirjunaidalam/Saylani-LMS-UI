@@ -34,3 +34,15 @@ gsap.to("#hero-title", {
     delay: 0.5,
     ease: "power2.in",
   });
+
+  const sidebar = document.getElementById("sidebar");
+  const menuToggle = document.getElementById("menu-toggle");
+  const closeMenu = document.getElementById("close-menu");
+
+  menuToggle.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-x-[100%]");
+  });
+
+  closeMenu.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-x-[100%]");
+  });

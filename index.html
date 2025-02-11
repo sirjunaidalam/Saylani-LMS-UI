@@ -11,23 +11,59 @@
   <body class="bg-gray-100">
     <!-- Navbar -->
     <nav class="flex bg-[#0066b3] text-white p-2 w-screen fixed z-20">
-      <img src="assets/images/logo.png" class="w-40 bg-white rounded-3xl" />
-      <ul class="flex justify-end space-x-6 me-6 w-screen">
-        <li><a href="#" class="block p-2">Profile</a></li>
-        <li><a href="#" class="block p-2">Settings</a></li>
+      <img src="assets/images/smit-logo.png" class="ms-12 md:ms-2 w-20 bg-white rounded-xl" />
+      <ul class="flex justify-end me-6 w-screen">
+        <li><a href="#" class="block p-2 w-10"> <img src="assets/icons/dashboard icon.png" alt=""> </a></li>
+        <li><a href="#" class="block p-2 w-10"> <img src="assets/icons/profile icon.png" alt=""> </a></li>
+        <li><a href="#" class="block p-2 w-10"><img src="assets/icons/settings icon.png" alt=""></a></li>
       </ul>
     </nav>
     <!-- Sidebar -->
-    <aside class="bg-[#0066b3] sidebar w-30 h-screen p-6 mt-12 text-white fixed z-10">
+    <button
+      id="menu-toggle"
+      class="md:hidden fixed top-4 left-4 z-20 bg-white text-[#0066b3] text-bold pt-1 pb-1 ps-2 pe-2 rounded-md"
+    >
+      ☰
+    </button>
+
+    <aside
+      id="sidebar"
+      class="bg-[#0066b3] sidebar w-60 h-screen p-6 mt-12 text-white fixed z-10 transform -translate-x-[100%] md:translate-x-0 transition-transform duration-300"
+    >
+      <button
+        id="close-menu"
+        class="md:hidden text-white text-2xl absolute top-2 right-4"
+      >
+        &times;
+      </button>
       <h2 class="text-2xl font-bold text-[#8dc63f] p-3">Dashboard</h2>
-      <ul class="">
-        <li><a href="#" class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3" >Overview</a></li>
-        <li><a href="#" class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3" onclick="loadPage('./pages/quiz.html')">Quiz Portal</a></li>
-        <li><a href="#" class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3" >Assignments</a></li>
+      <ul>
+        <li>
+          <a
+            href="#"
+            class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3"
+            >Overview</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3"
+            onclick="loadPage('./pages/quiz.html')"
+            >Quiz Portal</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            class="block rounded-3xl hover:bg-white hover:text-[#0066b3] p-3"
+            >Manage Users</a
+          >
+        </li>
       </ul>
     </aside>
 
-    <div id="main" class="ml-40 pt-20 flex justify-center items-center">
+    <div id="main" class="md:ml-60 pt-20 flex justify-center items-center">
       <!-- Hero Section -->
       <section
         class="h-screen flex flex-col justify-center items-center text-center p-6"
@@ -44,12 +80,10 @@
       </section>
     </div>
     <!-- Footer -->
-    <footer class="bg-[#0066b3] text-white p-2 text-center ml-40">
-        <p>&copy; 2025 Saylani LMS. All rights reserved.</p>
-      </footer>
+    <footer class="bg-[#0066b3] text-white p-2 text-center md:ml-40">
+      <p>&copy; 2025 Saylani LMS. All rights reserved.</p>
+    </footer>
 
-    <script src="assets/javascript/app.js">
-     
-    </script>
+    <script src="assets/javascript/app.js"></script>
   </body>
 </html>
